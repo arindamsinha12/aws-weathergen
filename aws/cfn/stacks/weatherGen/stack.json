@@ -15,7 +15,7 @@
       "Type": "String",
       "MinLength": "3",
       "MaxLength": "32",
-      "Default": "teichtahlAWS-own",
+      "Default": "ASinhaAWSIoT",
       "AllowedPattern": "[\\x20-\\x7E]*",
       "ConstraintDescription": "can contain only ASCII characters."
     },
