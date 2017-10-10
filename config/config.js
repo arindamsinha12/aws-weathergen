@@ -25,7 +25,7 @@ module.exports = {
   },
   forecast: {
     // replace with your own apiKey from https://darksky.net/dev/register
-    apiKey: 'xxxxxxxxxxxxxxxxxxxxx',
+    apiKey: '0afb623ce07679529e0432d1da581c74',
     url: 'api.forecast.io'
   }
 }
