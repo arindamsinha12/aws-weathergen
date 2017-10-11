@@ -24,7 +24,7 @@
       "Type": "String",
       "MinLength": "3",
       "MaxLength": "32",
-      "Default": "ami-9fa343e7"
+      "Default": "ami-718c6909"
     },
     "InstanceType": {
       "Description": "EC2 instance type",
