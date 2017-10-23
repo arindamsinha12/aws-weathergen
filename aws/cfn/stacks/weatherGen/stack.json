@@ -24,7 +24,7 @@
       "Type": "String",
       "MinLength": "3",
       "MaxLength": "32",
-      "Default": "ami-718c6909"
+      "Default": "ami-e689729e"
     },
     "InstanceType": {
       "Description": "EC2 instance type",
@@ -184,18 +184,13 @@
           "Fn::Base64": {
             "Fn::Join": ["", [
               "#!/bin/bash\n",
-              "sudo apt-get install -y wget\n",
-              "sudo apt-get install -y awscli\n",
-              "sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -\n",
-              "sudo apt-get install -y nodejs\n",
-              "sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -\n",
-              "echo \"deb https://dl.yarnpkg.com/debian/ stable main\" | sudo tee /etc/apt/sources.list.d/yarn.list\n",
-              "sudo apt-get update && sudo apt-get install -y yarn\n",
-              "sudo apt-get install -y git\n",
-              "sudo git clone https://github.com/arindamsinha12/aws-weathergen.git\n",
-              "sudo apt-get update\n",
-              "cd /aws-weathergen\n",
-              "sudo yarn install\n"
+              "yum -y update\n",
+              "wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo\n",
+              "curl -sL https://rpm.nodesource.com/setup_7.x | bash -\n",
+              "yum -y install nodejs yarn git\n",
+              "git clone https://github.com/awslabs/aws-weathergen.git\n",
+              "cd aws-weathergen\n",
+              "yarn install\n"
             ]]
           }
         }
